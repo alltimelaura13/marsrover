@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mars Rover</title>
+  <script src="javascripts/app.js"></script>
+</head>
+
+<script>
+
 var rover = {
   direction: "N",
   travelLog: [],
@@ -17,12 +27,12 @@ function turnLeft(rover){
     case "E":
     rover.direction = "N";
     break;
-    case "S":
+    case "W":
     rover.direction = "S";
     break
   }
   rover.travelLog.push(" " + rover.x + ", " + rover.y)
-  console.log("Rover direction: " + roer.direction);
+  console.log("Rover direction: " + rover.direction);
 }
 
 function turnRight(rover){
@@ -49,27 +59,27 @@ function moveForward(rover){
   console.log("moveForward was called")
   switch (rover.direction) {
     case "N":
-    if (rover.y > 0) {
-      rover.y -= 1;
-    }
+    
+      rover.y += 1;
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "S":
-    if (rover.y < 0) {
-      rover.y += 1;
-    }
+  
+      rover.y -= 1;
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "E":
-    if (rover.x > 0) {
+ 
       rover.x += 1;
-    }
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "W":
-    if (rover.x < 0) {
+    
       rover.x -= 1;
-    }
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
   }
@@ -80,27 +90,27 @@ function moveBackward(rover){
   console.log("moveBackward was called")
   switch (rover.direction) {
     case "N":
-    if (rover.y < 0) {
-      rover.y += 1;
-    }
+ 
+      rover.y -= 1;
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "S":
-    if (rover.y > 0) {
-      rover.y -= 1;
-    }
+
+      rover.y += 1;
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "E":
-    if (rover.x < 0) {
+
       rover.x -= 1;
-    }
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "W":
-    if (rover.x > 0) {
+    
       rover.x += 1;
-    }
+    
     console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
   }
@@ -112,7 +122,10 @@ function commands (movimientos) {
   for (var i = 0; i<movimientos.length; i++) {
     var movimiento1 = movimientos [i];
     if (movimiento1 === "f") {
-      goForward(rover);
+      moveForward(rover);
+    }
+    else if (movimiento1==="N") {
+      rover.direction = "N";
     }
     else if (movimiento1=== "r") {
       turnRight(rover);
@@ -129,3 +142,30 @@ function commands (movimientos) {
   }
   console.log("The Mars Rover has traveled to " + rover.travelLog);
 }
+
+
+</script>
+<body>
+
+
+
+
+    <button type="button"
+    onclick="commands (['f'])">
+    seguir.</button> 
+    <button type="button"
+    onclick="commands (['b'])">
+    sur.</button> 
+    <button type="button"
+    onclick="commands (['l'])">
+    oeste.</button> 
+    <button type="button"
+    onclick="commands (['r'])">
+    este.</button> 
+    <button type="button"
+    onclick="commands (['N'])">
+    norte.</button> 
+
+
+</body>
+</html>
