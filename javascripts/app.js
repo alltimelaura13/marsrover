@@ -152,19 +152,19 @@ function commands (movimientos) {
 
     <button type="button"
     onclick="commands (['f'])">
-    seguir.</button> 
+    Seguir</button> 
     <button type="button"
     onclick="commands (['b'])">
-    sur.</button> 
+    Sur</button> 
     <button type="button"
     onclick="commands (['l'])">
-    oeste.</button> 
+    Oeste</button> 
     <button type="button"
     onclick="commands (['r'])">
-    este.</button> 
+    Este</button> 
     <button type="button"
     onclick="commands (['N'])">
-    norte.</button> 
+    Norte</button> 
 
 
 </body>
