@@ -17,7 +17,7 @@ function turnLeft(rover){
     case "E":
     rover.direction = "N";
     break;
-    case "W":
+    case "S":
     rover.direction = "S";
     break
   }
@@ -52,25 +52,25 @@ function moveForward(rover){
     if (rover.y > 0) {
       rover.y -= 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "S":
     if (rover.y < 0) {
       rover.y += 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "E":
     if (rover.x > 0) {
       rover.x += 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "W":
     if (rover.x < 0) {
       rover.x -= 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
   }
   rover.travelLog.push(" " + rover.x + ", " + rover.y)
@@ -83,25 +83,25 @@ function moveBackward(rover){
     if (rover.y < 0) {
       rover.y += 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "S":
     if (rover.y > 0) {
       rover.y -= 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "E":
     if (rover.x < 0) {
       rover.x -= 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
     case "W":
     if (rover.x > 0) {
       rover.x += 1;
     }
-    console.log("Rover direction: " + rover.x + ", " rover.y);
+    console.log("Rover direction: " + rover.x + ", " + rover.y);
     break;
   }
   rover.travelLog.push(" " + rover.x + ", " + rover.y)
