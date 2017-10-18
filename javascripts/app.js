@@ -140,7 +140,7 @@ function commands (movimientos) {
       continue;
     }
   }
-  console.log("The Mars Rover has traveled to " + rover.travelLog);
+  console.log("WALL-E has traveled to " + rover.travelLog);
 }
 
 
