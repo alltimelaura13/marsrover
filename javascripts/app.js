@@ -17,7 +17,7 @@ function turnLeft(rover){
     case "E":
     rover.direction = "N";
     break;
-    case "S":
+    case "W":
     rover.direction = "S";
     break
   }
